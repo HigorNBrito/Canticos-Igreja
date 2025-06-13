@@ -1,0 +1,13 @@
+[
+{{ range $index, $page := where .Site.RegularPages "Type" "canticos" }}
+    {{ if $index }},{{ end }}
+    {
+        "uri": "{{ .Permalink }}",
+        "title": "{{ .Title }}",
+        "author": "{{ .Params.author }}",
+        "tags": {{ .Params.tags | jsonify }},
+        "content": {{ .Content | plainify | jsonify }}
+    }
+{{ end }}
+]
+

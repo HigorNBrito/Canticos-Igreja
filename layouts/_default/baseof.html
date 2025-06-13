@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/minisearch@6.0.1/dist/minisearch.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1><a href="/">{{ .Site.Title }}</a></h1>
+        <nav>
+            <ul>
+                <li><a href="/canticos">Cânticos</a></li>
+                <li><a href="/tags">Tags</a></li>
+                <li><a href="/sobre">Sobre</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer>
+        <p>&copy; {{ now.Year }} {{ .Site.Title }}</p>
+    </footer>
+    <script src="/js/search.js"></script>
+</body>
+</html>
+

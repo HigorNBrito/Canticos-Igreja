@@ -1,0 +1,18 @@
+{{ define "main" }}
+    <h2>Bem-vindo aos Cânticos da Igreja</h2>
+    <p>Aqui você encontrará uma coleção de cânticos para adoração e louvor.</p>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Pesquisar cânticos...">
+        <ul id="searchResults"></ul>
+    </div>
+
+    <h3>Cânticos Recentes</h3>
+    <ul>
+        {{ range first 5 (where .Site.RegularPages "Type" "canticos") }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+        {{ end }}
+    </ul>
+{{ end }}
+
+
