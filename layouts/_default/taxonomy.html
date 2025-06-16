@@ -1,8 +1,8 @@
 {{ define "main" }}
     <h1>Tags</h1>
     <ul>
-        {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
-        <li><a href="{{ .Permalink }}">{{ $name }} ({{ .Count }})</a></li>
+        {{ range .Site.Taxonomies.tags.ByCount }}
+        <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
         {{ end }}
     </ul>
 {{ end }}

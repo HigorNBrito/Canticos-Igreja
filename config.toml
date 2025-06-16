@@ -1,5 +1,6 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://HigorNBrito.github.io/Canticos-Igreja/'
 languageCode = 'pt-br'
 title = 'Cânticos da Igreja'
+publishDir = '.'
 
 
